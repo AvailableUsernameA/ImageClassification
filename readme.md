@@ -16,14 +16,14 @@ NG: Adhesive application is incomplete or defective.
 
 Here’s how the image classification and processing pipeline works:
 
-- **Scanning Program**: The scanning program captures an image of the part and saves it as a PNGfile in the designated scanning directory.  
+- **Scanning Program**: The scanning program captures an image of the part and saves it as a PNG file in the designated scanning directory.  
 - **Monitoring Program**:  
     The monitoring program continuously watches the scanning directory for new PNG files.  
     Once a new PNG is detected, it retrieves the image name and waits for one second(configurable) to avoid read-write conflicts — this is safe given that the station cycle time is 150 seconds, leaving ample processing time.  
     After the delay, the monitoring program starts the image classification process (e.g., using a trained model to determine OK/NG).  
 - **Classification & File Management**:  
 After classification, the monitoring program moves the image from the scanning directory to a target (output) directory.  
-It then renames the image by appending either _OKor _NGto the filename, indicating the classification result.  
+It then renames the image by appending either _OK or _NG to the filename, indicating the classification result.  
 - **Downstream Processing**:
   Other programs or systems further process the images located in the target directory, based on their OK/NG labels.  
 
