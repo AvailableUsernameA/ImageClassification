@@ -18,12 +18,5 @@ Automated visual inspection system for detecting **incomplete glue application**
 
 ## Workflow Design
 
-```mermaid
-graph TD
-    A[Scanner saves image as *.png] --> B[Monitor watches directory]
-    B --> C{New PNG detected?}
-    C -->|Yes| D[Wait 1s (configurable)]
-    D --> E[Move & rename: part123_OK.png or part123_NG.png]
-    E --> F[Classification Model (PyTorch)]
-    F --> G[Result logged + UI alert]
+
 
