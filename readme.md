@@ -35,7 +35,7 @@ It then renames the image by appending either _OK or _NG to the filename, indica
 1.The server is a Windows Server.  
 2.The scanned images are associated with the engine number (uniqueness), for example, 41235672_TJ.png.  
 3.The number of images per year is 200,000. To prevent too many files in the target directory, subdirectories will be created, with 1,000 files in each subdirectory. The subdirectories are created based on the image names, for example, Output\41\41235\41235672_TJ.png.  
-4.After image recognition, they will be renamed to Output\41\41235\41235672_TJ_OK.png or Output\41\41235\41235672_TJ_NG.png.  
+4.Classification failures or invalid images will be marked as NG. After image recognition, they will be renamed to Output\41\41235\41235672_TJ_OK.png or Output\41\41235\41235672_TJ_NG.png.  
 
 
 
